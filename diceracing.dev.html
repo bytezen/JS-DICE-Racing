@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DICE Racing JS (Development version)</title>
+        <style>
+            body {
+                margin: 20px;
+                font-family: "Verdana, Geneva, sans-serif";
+            }
+
+            #container {
+                width: 800px;
+                margin: 0px auto;
+            }
+
+            #game-wrapper {
+                position: relative;
+            }
+        </style>
+        <script src="build/ashrs.js"></script>
+        <script src="build/diceracing.js"></script>
+
+    </head>
+    <body>
+        <div id="container">
+            <!-- game writes dom elements into this wrapper -->
+            <div id="game-wrapper"></div>
+            <p>
+                <strong>Arrow keys</strong>: movement -
+                <strong>Z</strong>: fire
+            </p>
+        </div>
+
+    </body>
+</html>

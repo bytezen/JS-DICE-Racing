@@ -1,0 +1,42 @@
+var requirejs = require('requirejs');
+requirejs.config({
+
+    // Initialize the application with the main application file.
+    //deps: ["game/dice-racing"],
+  /*
+  callback: function(d) {
+    console.log('got here');
+    var game = new d();
+    console.log(game.getName());
+  },
+  */
+  baseurl: '.',
+    paths: {
+        // JavaScript folders.
+        game: "game",
+
+        // Libraries
+        ash: "../lib/ash/ash",
+        Stats: "../lib/utils/Stats"
+    },
+
+    // Sets the configuration for your third party scripts that are not AMD compatible
+    shim: {
+        "Stats": {
+            "exports": "Stats"
+        }
+    },
+  nodeRequire: require
+});
+
+
+
+
+requirejs([
+            '../lib/ash/ash',
+            'game/dice-racing'
+          ],
+         function(Ash,DR){
+           var game = new DR();
+           game.start();
+        });
